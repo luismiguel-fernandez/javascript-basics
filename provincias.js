@@ -1,54 +1,54 @@
 let provincias
 
-provincias.push("Álava")
-provincias.push("Albacete")
-provincias.push("Alicante")
-provincias.push("Almería")
-provincias.push("Ávila")
-provincias.push("Badajoz")
-provincias.push("Baleares (Islas)")
-provincias.push("Barcelona")
-provincias.push("Burgos")
-provincias.push("Cáceres")
-provincias.push("Cádiz")
-provincias.push("Castellón")
-provincias.push("Ciudad Real")
-provincias.push("Córdoba")
-provincias.push("Coruña (La)")
-provincias.push("Cuenca")
-provincias.push("Girona")
-provincias.push("Granada")
-provincias.push("Guadalajara")
-provincias.push("Guipúzcoa")
-provincias.push("Huelva")
-provincias.push("Huesca")
-provincias.push("Jaén")
-provincias.push("León")
-provincias.push("Lleida")
-provincias.push("Rioja (La)")
-provincias.push("Lugo")
-provincias.push("Madrid")
-provincias.push("Málaga")
-provincias.push("Murcia")
-provincias.push("Navarra")
-provincias.push("Ourense")
-provincias.push("Asturias")
-provincias.push("Palencia")
-provincias.push("Palmas (Las)")
-provincias.push("Pontevedra")
-provincias.push("Salamanca")
-provincias.push("Santa Cruz de Tenerife")
-provincias.push("Cantabria")
-provincias.push("Segovia")
-provincias.push("Sevilla")
-provincias.push("Soria")
-provincias.push("Tarragona")
-provincias.push("Teruel")
-provincias.push("Toledo")
-provincias.push("Valencia")
-provincias.push("Valladolid")
-provincias.push("Vizcaya")
-provincias.push("Zamora")
-provincias.push("Zaragoza")
-provincias.push("Ceuta")
-provincias.push("Melilla")
+provincias["01"] = "Álava";
+provincias["02"] = "Albacete";
+provincias["03"] = "Alicante";
+provincias["04"] = "Almería";
+provincias["33"] = "Asturias";
+provincias["05"] = "Ávila";
+provincias["06"] = "Badajoz";
+provincias["07"] = "Baleares (Islas)";
+provincias["08"] = "Barcelona";
+provincias["09"] = "Burgos";
+provincias["10"] = "Cáceres";
+provincias["11"] = "Cádiz";
+provincias["39"] = "Cantabria";
+provincias["12"] = "Castellón";
+provincias["51"] = "Ceuta";
+provincias["13"] = "Ciudad Real";
+provincias["14"] = "Córdoba";
+provincias["15"] = "Coruña (La)";
+provincias["16"] = "Cuenca";
+provincias["17"] = "Girona";
+provincias["18"] = "Granada";
+provincias["19"] = "Guadalajara";
+provincias["20"] = "Guipúzcoa";
+provincias["21"] = "Huelva";
+provincias["22"] = "Huesca";
+provincias["23"] = "Jaén";
+provincias["24"] = "León";
+provincias["27"] = "Lugo";
+provincias["25"] = "Lleida";
+provincias["28"] = "Madrid";
+provincias["29"] = "Málaga";
+provincias["52"] = "Melilla";
+provincias["30"] = "Murcia";
+provincias["31"] = "Navarra";
+provincias["32"] = "Ourense";
+provincias["34"] = "Palencia";
+provincias["35"] = "Palmas (Las)";
+provincias["36"] = "Pontevedra";
+provincias["26"] = "Rioja (La)";
+provincias["37"] = "Salamanca";
+provincias["38"] = "Santa Cruz de Tenerife";
+provincias["40"] = "Segovia";
+provincias["41"] = "Sevilla";
+provincias["42"] = "Soria";
+provincias["43"] = "Tarragona";
+provincias["44"] = "Teruel";
+provincias["45"] = "Toledo";
+provincias["46"] = "Valencia";
+provincias["47"] = "Valladolid";
+provincias["48"] = "Vizcaya";
+provincias["49"] = "Zamora";
+provincias["50"] = "Zaragoza";
