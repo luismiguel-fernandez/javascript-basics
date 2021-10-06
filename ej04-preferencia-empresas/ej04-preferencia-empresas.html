@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/ej04.css">
+    <title>Plantilla</title>
+</head>
+<body>
+	<div class="container">
+
+		<div class="row">
+			<h1>Selección de empresas de prácticas</h1>
+		</div>
+
+		<div class="row">
+		<form>
+			<div>
+				<div class="input-group mb-3">
+					<span class="input-group-text" id="txtUsuario">@</span>
+					<input type="text" class="form-control" placeholder="Nombre del alumno o alumna" aria-label="Username" aria-describedby="txtUsuario">
+				</div>
+			</div>
+			<div class="row align-items-start">
+				<div class="col">
+					<label for="empresa1" class="form-label">Elige una empresa como tu primera opción</label>
+					<select class="form-select" id="empresa1">
+						<option value="nada">(Elige empresa)</option>
+						<option value="goo">Google</option>
+						<option value="fac">Facebook</option>
+						<option value="app">Apple</option>
+						<option value="eve">Everis</option>
+						<option value="twi">Twitter</option>
+						<option value="mic">Microsoft</option>
+					</select>
+				</div>
+				<div class="col">
+					<label for="empresa2" class="form-label">Elige una empresa como tu segunda opción</label>
+					<select class="form-select" id="empresa2" disabled>
+					</select>
+				</div>
+			</div>
+			<h4>Pulsa el siguiente botón para enviar tus preferencias</h4>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+		</form>
+		</div>
+
+		<div>
+			<h1>Preferencias almacenadas</h1>
+		</div>
+
+		<div class="row">
+			<table class="table" id="tablaDatos">
+				<tr>
+					<th>Usuario</th>
+					<th>Prioridad 1</th>
+					<th>Prioridad 2</th>
+					<th>Fecha/Hora</th>
+					<th>Borrar</th>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+
+    <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script src="scripts/ej04.js"></script>
+</body>
+</html>
