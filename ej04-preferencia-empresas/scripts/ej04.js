@@ -93,6 +93,12 @@ formu.addEventListener("submit",function(ev){
             this.parentElement.parentElement.remove()
         }
         nuevaCelda5.append(nuevoBoton)
+        //vaciar el formulario
+        inputNombre.value = ""
+        selectEmpresas1.value = "nada"
+        selectEmpresas2.disabled = true
+        selectEmpresas2.innerHTML = "<option value='nada'>(Elige empresa)</option>"
+        inputNombre.focus()
     }
 })
 
