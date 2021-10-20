@@ -50,14 +50,15 @@ bola.addEventListener("click", function(){
         moverBola()
         //resetear el interval para que se ajuste a partir del clic
         clearInterval(agitador)
-        agitador = setInterval(moverBola, MS_CAMBIO_BOLA)
+        agitador = setInterval(moverBola, MS_CAMBIO_BOLA - puntos.textContent*50)
+        velocidad.textContent = 1 + puntos.textContent/10
     }
 })
 
 //definir el comportamiento del botón btnEmpezar
 btnEmpezar.addEventListener("click", function(){
     //definir los parámetros de la partida (puntos, velocidad, tiempo)
-    tiempo.textContent = 10
+    tiempo.textContent = 20
     puntos.textContent = 0
     velocidad.textContent = 1
 
