@@ -7,6 +7,8 @@ const ALTURA_BOLA = 30
 
 let nuevoTop
 let nuevoLeft
+let velX = Math.random()*4 - 2
+let velY = Math.random()*4 - 2
 
 function addBola(){
     //crear un nuevo DIV para la bola
@@ -26,16 +28,22 @@ function addBola(){
     return nuevaBola
 }
 
+//hacer que la bola se mueva hacia abajo
+function bajarBola(){
+    nuevoTop += velY
+    nuevoLeft += velX
+    bola.style.top = nuevoTop + "px"
+    bola.style.left = nuevoLeft + "px"
+    //comprobar si la bola ha llegado abajo o arriba
+    if (nuevoTop > ALTURA_TABLERO - ALTURA_BOLA || nuevoTop < 0) {
+        velY *= -1
+    }
+    if (nuevoLeft > ANCHURA_TABLERO - ANCHURA_BOLA || nuevoLeft < 0) {
+        velX *= -1
+    }
+}
+
 tablero.style.width = ANCHURA_TABLERO + "px"
 tablero.style.height = ALTURA_TABLERO + "px"
 let bola = addBola()
-//hacer que la bola se mueva hacia abajo
-function bajarBola(){
-    nuevoTop++
-    bola.style.top = nuevoTop + "px"
-    //comprobar si la bola ha llegado al límite del tablero
-    if (nuevoTop > ALTURA_TABLERO - ALTURA_BOLA) {
-        alert("te has salido del tablero")
-    }
-}
 let intervalMueveBola = setInterval(bajarBola, 20)
