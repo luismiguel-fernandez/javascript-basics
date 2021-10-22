@@ -23,26 +23,55 @@ function addBola(){
     nuevoDivBola.style.height = ALTURA_BOLA + "px"
     nuevoDivBola.style.top = y + "px"
     nuevoDivBola.style.left = x + "px"
+    let r = Math.random()*255
+    let g = Math.random()*255
+    let b = Math.random()*255
+    nuevoDivBola.style.backgroundColor = `rgb(${r},${g},${b})`
+    //nuevoDivBola.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+
     tablero.append(nuevoDivBola)
 
     //crear la bola en la lógica de mi aplicación
     let nuevaBola = new bola(nuevoDivBola,x,y,vx,vy)
     bolas.push(nuevaBola)
+    
+    //aumentar contador visual de bolas
+    document.querySelector("#numBolas").textContent++
+}
+
+function remBola(){
+    if (bolas.length) {
+        //quitar la última bola del árbol DOM
+        bolas[bolas.length-1].bola.remove()
+        //quitar la última bola del array
+        bolas.pop()
+        //reducir contador visual de bolas
+        document.querySelector("#numBolas").textContent--
+    }
 }
 
 function moverBolas() {
-    let bolaActual = bolas[0]
-    bolaActual.posX += bolaActual.velX
-    bolaActual.posY += bolaActual.velY
-    bolaActual.bola.style.left = bolaActual.posX + "px"
-    bolaActual.bola.style.top = bolaActual.posY + "px"
+    bolas.forEach(bolaActual => {
+        bolaActual.posX += bolaActual.velX
+        bolaActual.posY += bolaActual.velY
+        bolaActual.bola.style.left = bolaActual.posX + "px"
+        bolaActual.bola.style.top = bolaActual.posY + "px"
+        if (bolaActual.posY > ALTURA_TABLERO - ALTURA_BOLA
+             || bolaActual.posY < 0) {
+                bolaActual.velY *= -1
+        }
+        if (bolaActual.posX > ANCHURA_TABLERO - ANCHURA_BOLA
+            || bolaActual.posX < 0) {
+               bolaActual.velX *= -1
+        }
+    })
 }
 
 function main() {
     tablero.style.width = ANCHURA_TABLERO + "px"
     tablero.style.height = ALTURA_TABLERO + "px"
-    addBola()
-    addBola()
+    document.querySelector("#addBola").addEventListener("click",addBola)
+    document.querySelector("#remBola").addEventListener("click",remBola)
     addBola()
     let agitador = setInterval(moverBolas,25)
 }
