@@ -1,5 +1,17 @@
 document.addEventListener("DOMContentLoaded",main)
 
+/* 1 LISTENER EN EL CONTENEDOR PADRE DE LOS BOTONES */
+function main() {
+    const divByte = document.querySelector("#byte")
+    divByte.addEventListener("click",function(ev){
+        if (ev.target.nodeName.toLowerCase() == "BUTTON") {
+            ev.target.textContent = (++ev.target.textContent) % 2
+            updateDecimal()
+        }
+    })
+}
+
+/* 1 LISTENER POR CADA BOTÓN
 function main() {
     let todosLosBotones = document.querySelectorAll("#byte>button")
     todosLosBotones.forEach(element => {
@@ -9,7 +21,9 @@ function main() {
             updateDecimal()
         })
     })
-}
+}*/
+
+
 
 function updateDecimal() {
     let todosLosBotones = document.querySelectorAll("#byte>button")
