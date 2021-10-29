@@ -11,30 +11,35 @@ function checkForm() {
     let todoOK = true
 
     const nombre = document.querySelector("#conductor")
-    if (!checkNombre(nombre.value.trim())) todoOK = false
+    if (!checkNombre(nombre.value.trim())) {
+        todoOK = false
+        //recuperar el label para errores del nombre
+        
+        //mostrar un mensaje de error en ese label
+    }
 
     const dni = document.querySelector("#dni")
     if (!checkDNI(dni.value.trim())) todoOK = false
+    
+    const edad = document.querySelector("#edad")
+    if (!checkEdad(edad.value)) todoOK = false
+    
+    const carne = document.querySelector("#carne")
+    if (!checkCarne(carne.checked)) todoOK = false
 
-    /*if (!checkEdad()) todoOK = false
-    return todoOK*/
+    const tipos = document.querySelectorAll('input[name="tc"]')
+    if (!checkTipo(tipos)) todoOK = false
+
+    const tipoMulta = document.querySelector('#tipo')
+    if (!checkTipoMulta(tipoMulta.value)) todoOK = false
+
+    return todoOK
 }
 
 function checkNombre(nombre) {
     let expreg = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ][a-zA-ZñÑáéíóúÁÉÍÓÚ \-]*$/
-
-    if (expreg.test(nombre)) {
-        console.log("nombre válido")
-        return true
-    } else {
-        console.log("nombre no válido")
-        return false
-    }
-
-
-    //return (nombre.length > 0 && isNaN(nombre)) //isNotANumber
+    return (expreg.test(nombre))
 }
-
 function checkDNI(dni) {
     //8 dígitos y 1 letra
     let expreg = /^\d{8}[a-zA-Z]$/
@@ -48,4 +53,23 @@ function checkDNI(dni) {
             return true
     }
     return false
+}
+function checkEdad(edad) {
+    return (edad >= 15 && edad <= 150)
+}
+function checkCarne(carne) {
+    return carne
+}
+function checkTipo(tipos) {
+    let radioChecked = false
+    tipos.forEach(element => {
+        if (element.checked) {
+            radioChecked = true
+            return
+        }
+    })
+    return radioChecked
+}
+function checkTipoMulta(tipoMulta) {
+    return tipoMulta.length
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/ej09.css">
     <script defer src="scripts/bootstrap.bundle.min.js"></script>
     <script defer src="scripts/ej09-prof.js"></script>  
     <title>Formulario para introducir multas</title>
@@ -15,18 +16,19 @@
 		<legend>Datos del conductor</legend>
 
 		<label for="conductor">Nombre:</label>
-		<input type="text" id="conductor">
+		<input type="text" id="conductor" required>
 		<label class="msgError" id="conductorError" ></label><br>
 
 		<label for="dni">DNI:</label>
-		<input type="text" id="dni">
+		<input type="text" id="dni" required>
 		<label class="msgError" id="dniError"></label><br>
 
 		<label for="edad">Edad:</label>
-		<input type="number" id="edad">
+		<input type="number" id="edad" min="15" max="150" required>
 		<label class="msgError" id="edadError"></label><br>
 
-		<label>Carné en vigor:</label> <input type="checkbox" id="carne"><br>
+		<label>Carné en vigor:</label>
+        <input type="checkbox" id="carne"><br>
 		
 		<label>Tipo de carné</label><br>
 		<input name="tc" type="radio" value="a">Tipo A<br>
